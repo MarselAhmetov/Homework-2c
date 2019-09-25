@@ -16,9 +16,10 @@ public class ProfileServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
+        HttpSession session = request.getSession(false);
+
         if (session.getAttribute("name") == null) {
-            //response.sendRedirect("/login");
+            response.sendRedirect("login");
         } else {
             PrintWriter writer = response.getWriter();
             writer.write("\n" +

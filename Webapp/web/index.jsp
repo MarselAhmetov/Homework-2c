@@ -23,7 +23,7 @@
           <br>
           <input id="group" type="text" name="group" placeholder="Enter group">
           <br>
-          <input type="submit">
+          <input type="submit" >
       </form>
     </div>
 
